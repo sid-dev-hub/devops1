@@ -10,7 +10,7 @@ pipeline {
 
     	stage("Execute"){
       		steps("Execute"){
-	  		sh python3 demo.py
+	  		sh "python3 demo.py"
 	}
       } 
    }
