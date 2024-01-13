@@ -1,0 +1,15 @@
+pipeline {
+	agent any
+
+	stages{
+		stage("Checkout"){
+			steps{
+				git branch: 'dev', poll: false, url: 'https://github.com/sid-dev-hub/devops1'
+				}
+
+		stage("Execute"){
+			python3 demo.py
+			}
+		}
+	}
+}
