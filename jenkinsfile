@@ -1,11 +1,17 @@
 pipeline {
-	agent any
+  agent any
 
-	stages{
-		stage("Checkout"){
-			steps{
-				git branch: 'dev', poll:true, url: 'https://github.com/sid-dev-hub/devops1'
-				}
-		}
+    stages{
+      stage("Checkout"){
+        steps{
+	  git branch: 'dev', poll:true, url: 'https://github.com/sid-dev-hub/devops1'
 	}
+      }
+
+    stage{
+     steps("Execute"){
+	sh python3 demo.py
+	}
+      } 
+   }
 }
