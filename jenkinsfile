@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+    agent any
 
     stages{
       stage("Checkout"){
@@ -9,8 +9,8 @@ pipeline {
       }
 
     stage{
-     steps("Execute"){
-	sh python3 demo.py
+      steps("Execute"){
+	  sh python3 demo.py
 	}
       } 
    }
