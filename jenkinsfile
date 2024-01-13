@@ -4,7 +4,7 @@ pipeline {
 	stages{
 		stage("Checkout"){
 			steps{
-				git branch: 'dev', poll: false, url: 'https://github.com/sid-dev-hub/devops1'
+				git branch: 'dev', poll:true, url: 'https://github.com/sid-dev-hub/devops1'
 				}
 		}
 	}
