@@ -8,9 +8,10 @@ pipeline {
 	}
       }
 
-    	stage("Execute"){
-      		steps("Execute"){
-	  		sh "python3 demo.py"
+    	stage("Build"){
+      		steps{
+	  		sh "docker build -t nginx-img ."
+			sh "docker run -d -p 7000:80 nginx-img"
 	}
       } 
    }
