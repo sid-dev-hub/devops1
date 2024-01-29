@@ -1,8 +1,7 @@
 pipeline {
     agent {
 		docker {
-			image 'sidsalakki14/demodocker'
-			
+			image 'nginx:latest'
 		}
 	}
 
