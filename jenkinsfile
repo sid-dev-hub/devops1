@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-		sh "docker run -p 7000:80 -d nginx"
-	}
+    agent dockerAgent
 
     stages{
 /*      	stage("Checkout"){
