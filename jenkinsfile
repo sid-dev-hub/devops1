@@ -1,5 +1,5 @@
 pipeline {
-    agent {dockerAgent}
+    agent {label 'dockerAgent'}
 
     stages{
 /*      	stage("Checkout"){
